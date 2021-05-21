@@ -3,15 +3,6 @@
 # include <string.h>
 # include <time.h>
 # include <windows.h>
- 
-//转账bug：可以转给自己,有空记得完善                搞定 
-//红包结构体未完善时间函数 
-//grabrp函数有问题，split被减到等于1的时候应该将其剩余红包进行一次性输出            搞定 
-//grabrp函数随机分配的红包都是整数，甚至包含了0，还有随机数都离得很近跨度不大；             搞不定 
-//grabrp函数一个人可以一直抽取同一红包必须修改  
-
-//为啥不能对结构体成员进行赋值呢？
-
 
 //定义用户结构体(用户名wname，姓名rname，密码password，余额balance，手机号码tnumber)
 struct User{
@@ -152,7 +143,7 @@ void addUser (struct User user)
 	q->next = NULL;
 	p->next = q;
 
-	writeFile();
+	//writeFile();
 }
 
 //开设微信账户
